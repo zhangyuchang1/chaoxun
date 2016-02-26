@@ -7,23 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		120D02631C7FEB7E0062204E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 120D02611C7FEB7E0062204E /* MainViewController.m */; };
+		120D02641C7FEB7E0062204E /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 120D02621C7FEB7E0062204E /* MainViewController.xib */; };
 		1253260D1C7C5C1B000537F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1253260C1C7C5C1B000537F6 /* main.m */; };
 		125326101C7C5C1B000537F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1253260F1C7C5C1B000537F6 /* AppDelegate.m */; };
-		125326131C7C5C1B000537F6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 125326121C7C5C1B000537F6 /* ViewController.m */; };
-		125326161C7C5C1B000537F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 125326141C7C5C1B000537F6 /* Main.storyboard */; };
 		125326191C7C5C1B000537F6 /* ChaoXun.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 125326171C7C5C1B000537F6 /* ChaoXun.xcdatamodeld */; };
 		1253261B1C7C5C1B000537F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1253261A1C7C5C1B000537F6 /* Assets.xcassets */; };
 		1253261E1C7C5C1B000537F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1253261C1C7C5C1B000537F6 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		120D02601C7FEB7E0062204E /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		120D02611C7FEB7E0062204E /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		120D02621C7FEB7E0062204E /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		120D02651C7FF0E50062204E /* ChaoXunHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaoXunHeader.pch; sourceTree = "<group>"; };
 		125326081C7C5C1B000537F6 /* ChaoXun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChaoXun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1253260C1C7C5C1B000537F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1253260E1C7C5C1B000537F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1253260F1C7C5C1B000537F6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		125326111C7C5C1B000537F6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		125326121C7C5C1B000537F6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		125326151C7C5C1B000537F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		125326181C7C5C1B000537F6 /* ChaoXun.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChaoXun.xcdatamodel; sourceTree = "<group>"; };
 		1253261A1C7C5C1B000537F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1253261D1C7C5C1B000537F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -41,6 +42,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		120D02661C7FF8BF0062204E /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
 		125325FF1C7C5C1B000537F6 = {
 			isa = PBXGroup;
 			children = (
@@ -60,11 +68,12 @@
 		1253260A1C7C5C1B000537F6 /* ChaoXun */ = {
 			isa = PBXGroup;
 			children = (
+				120D02661C7FF8BF0062204E /* Vendor */,
 				1253260E1C7C5C1B000537F6 /* AppDelegate.h */,
 				1253260F1C7C5C1B000537F6 /* AppDelegate.m */,
-				125326111C7C5C1B000537F6 /* ViewController.h */,
-				125326121C7C5C1B000537F6 /* ViewController.m */,
-				125326141C7C5C1B000537F6 /* Main.storyboard */,
+				120D02601C7FEB7E0062204E /* MainViewController.h */,
+				120D02611C7FEB7E0062204E /* MainViewController.m */,
+				120D02621C7FEB7E0062204E /* MainViewController.xib */,
 				1253261A1C7C5C1B000537F6 /* Assets.xcassets */,
 				1253261C1C7C5C1B000537F6 /* LaunchScreen.storyboard */,
 				1253261F1C7C5C1B000537F6 /* Info.plist */,
@@ -78,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				1253260C1C7C5C1B000537F6 /* main.m */,
+				120D02651C7FF0E50062204E /* ChaoXunHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -140,8 +150,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1253261E1C7C5C1B000537F6 /* LaunchScreen.storyboard in Resources */,
+				120D02641C7FEB7E0062204E /* MainViewController.xib in Resources */,
 				1253261B1C7C5C1B000537F6 /* Assets.xcassets in Resources */,
-				125326161C7C5C1B000537F6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,24 +162,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				125326131C7C5C1B000537F6 /* ViewController.m in Sources */,
 				125326101C7C5C1B000537F6 /* AppDelegate.m in Sources */,
 				125326191C7C5C1B000537F6 /* ChaoXun.xcdatamodeld in Sources */,
 				1253260D1C7C5C1B000537F6 /* main.m in Sources */,
+				120D02631C7FEB7E0062204E /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		125326141C7C5C1B000537F6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				125326151C7C5C1B000537F6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1253261C1C7C5C1B000537F6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -207,6 +209,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = ChaoXun/ChaoXunHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -248,6 +251,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = ChaoXun/ChaoXunHeader.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -264,7 +268,10 @@
 		125326231C7C5C1B000537F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = ChaoXun/ChaoXunHeader.pch;
 				INFOPLIST_FILE = ChaoXun/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -276,7 +283,10 @@
 		125326241C7C5C1B000537F6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = ChaoXun/ChaoXunHeader.pch;
 				INFOPLIST_FILE = ChaoXun/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -304,6 +314,7 @@
 				125326241C7C5C1B000537F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

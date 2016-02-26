@@ -1,0 +1,44 @@
+//
+//  ChaoXunHeader.pch
+//  ChaoXun
+//
+//  Created by zyc on 16/2/26.
+//  Copyright © 2016年 zyc. All rights reserved.
+//
+
+#ifndef ChaoXunHeader_pch
+#define ChaoXunHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define ChaoXun_URL  @""
+
+/*
+ *日志输出宏定义
+ */
+#ifdef DEBUG    // 调试状态
+#define MyLog(...) NSLog(__VA_ARGS__)
+#else           // 发布状态
+#define MyLog(...)
+#endif
+
+/*
+ *颜色
+ */
+#pragma mark - 颜色
+#define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
+
+/*
+ *屏幕高度尺寸计算
+ */
+#pragma mark - 屏幕高度尺寸计算
+#define SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
+#define SCREEN_WIDTH  [[UIScreen mainScreen] bounds].size.width
+#define NavBar_HEIGHT 64
+#define TabBar_HEIGHT 49
+#define StatusBar_HEIGHT 20
+
+
+#endif /* ChaoXunHeader_pch */
