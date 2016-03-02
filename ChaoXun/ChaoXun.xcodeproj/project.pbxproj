@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		120045C21C8532A40054372F /* AddressItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 120045C11C8532A40054372F /* AddressItemView.m */; };
 		120D02631C7FEB7E0062204E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 120D02611C7FEB7E0062204E /* MainViewController.m */; };
 		120D02641C7FEB7E0062204E /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 120D02621C7FEB7E0062204E /* MainViewController.xib */; };
 		1253260D1C7C5C1B000537F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1253260C1C7C5C1B000537F6 /* main.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		120045C01C8532A40054372F /* AddressItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressItemView.h; sourceTree = "<group>"; };
+		120045C11C8532A40054372F /* AddressItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressItemView.m; sourceTree = "<group>"; };
 		120D02601C7FEB7E0062204E /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		120D02611C7FEB7E0062204E /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		120D02621C7FEB7E0062204E /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
@@ -74,6 +77,8 @@
 				120D02601C7FEB7E0062204E /* MainViewController.h */,
 				120D02611C7FEB7E0062204E /* MainViewController.m */,
 				120D02621C7FEB7E0062204E /* MainViewController.xib */,
+				120045C01C8532A40054372F /* AddressItemView.h */,
+				120045C11C8532A40054372F /* AddressItemView.m */,
 				1253261A1C7C5C1B000537F6 /* Assets.xcassets */,
 				1253261C1C7C5C1B000537F6 /* LaunchScreen.storyboard */,
 				1253261F1C7C5C1B000537F6 /* Info.plist */,
@@ -166,6 +171,7 @@
 				125326191C7C5C1B000537F6 /* ChaoXun.xcdatamodeld in Sources */,
 				1253260D1C7C5C1B000537F6 /* main.m in Sources */,
 				120D02631C7FEB7E0062204E /* MainViewController.m in Sources */,
+				120045C21C8532A40054372F /* AddressItemView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
