@@ -2,11 +2,12 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9531"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
             <connections>
+                <outlet property="bottomBar" destination="0fP-nQ-1hN" id="gEz-z5-77I"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,28 +16,33 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0fP-nQ-1hN">
-                    <rect key="frame" x="0.0" y="510" width="320" height="58"/>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0fP-nQ-1hN">
+                    <rect key="frame" x="0.0" y="510" width="320" height="60"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="盐官" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xm7-jG-ika">
-                            <rect key="frame" x="41" y="19" width="56" height="31"/>
-                            <color key="backgroundColor" red="0.066666666666666666" green="0.5725490196078431" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oz4-pd-La5" customClass="AddressItemView">
-                            <rect key="frame" x="198" y="19" width="84" height="31"/>
+                            <rect key="frame" x="80" y="20" width="80" height="40"/>
+                            <color key="backgroundColor" red="0.066666666669999999" green="0.57254901960000004" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="unV-zJ-G68" customClass="AddressItemView">
+                            <rect key="frame" x="160" y="0.0" width="80" height="40"/>
+                            <color key="backgroundColor" red="0.066666666669999999" green="0.57254901960000004" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F4Y-5W-fa5" customClass="AddressItemView">
+                            <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
+                            <color key="backgroundColor" red="0.066666666669999999" green="0.57254901960000004" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rc9-6r-rQS" customClass="AddressItemView">
+                            <rect key="frame" x="240" y="20" width="80" height="40"/>
                             <color key="backgroundColor" red="0.066666666669999999" green="0.57254901960000004" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                     </subviews>
                     <color key="backgroundColor" red="1" green="0.44258183779999999" blue="0.32090952379999999" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="58" id="yzG-sQ-QjI"/>
+                        <constraint firstAttribute="height" constant="60" id="yzG-sQ-QjI"/>
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="0fP-nQ-1hN" secondAttribute="bottom" id="Dmt-vM-Uiw"/>
                 <constraint firstItem="0fP-nQ-1hN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="S9V-Y9-3JQ"/>

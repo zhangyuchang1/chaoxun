@@ -15,6 +15,8 @@
 		125326191C7C5C1B000537F6 /* ChaoXun.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 125326171C7C5C1B000537F6 /* ChaoXun.xcdatamodeld */; };
 		1253261B1C7C5C1B000537F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1253261A1C7C5C1B000537F6 /* Assets.xcassets */; };
 		1253261E1C7C5C1B000537F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1253261C1C7C5C1B000537F6 /* LaunchScreen.storyboard */; };
+		127BD59A1C87DC3B006FFD0D /* UIView+DDAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 127BD5991C87DC3B006FFD0D /* UIView+DDAddition.m */; };
+		127BD59D1C8805A4006FFD0D /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 127BD59C1C8805A4006FFD0D /* DrawView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		1253261A1C7C5C1B000537F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1253261D1C7C5C1B000537F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1253261F1C7C5C1B000537F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		127BD5981C87DC3B006FFD0D /* UIView+DDAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DDAddition.h"; sourceTree = "<group>"; };
+		127BD5991C87DC3B006FFD0D /* UIView+DDAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DDAddition.m"; sourceTree = "<group>"; };
+		127BD59B1C8805A4006FFD0D /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
+		127BD59C1C8805A4006FFD0D /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,7 @@
 		1253260A1C7C5C1B000537F6 /* ChaoXun */ = {
 			isa = PBXGroup;
 			children = (
+				127BD5971C87DC23006FFD0D /* Category */,
 				120D02661C7FF8BF0062204E /* Vendor */,
 				1253260E1C7C5C1B000537F6 /* AppDelegate.h */,
 				1253260F1C7C5C1B000537F6 /* AppDelegate.m */,
@@ -78,6 +85,8 @@
 				120D02611C7FEB7E0062204E /* MainViewController.m */,
 				120D02621C7FEB7E0062204E /* MainViewController.xib */,
 				120045C01C8532A40054372F /* AddressItemView.h */,
+				127BD59B1C8805A4006FFD0D /* DrawView.h */,
+				127BD59C1C8805A4006FFD0D /* DrawView.m */,
 				120045C11C8532A40054372F /* AddressItemView.m */,
 				1253261A1C7C5C1B000537F6 /* Assets.xcassets */,
 				1253261C1C7C5C1B000537F6 /* LaunchScreen.storyboard */,
@@ -95,6 +104,15 @@
 				120D02651C7FF0E50062204E /* ChaoXunHeader.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		127BD5971C87DC23006FFD0D /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				127BD5981C87DC3B006FFD0D /* UIView+DDAddition.h */,
+				127BD5991C87DC3B006FFD0D /* UIView+DDAddition.m */,
+			);
+			name = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,9 +185,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				127BD59A1C87DC3B006FFD0D /* UIView+DDAddition.m in Sources */,
 				125326101C7C5C1B000537F6 /* AppDelegate.m in Sources */,
 				125326191C7C5C1B000537F6 /* ChaoXun.xcdatamodeld in Sources */,
 				1253260D1C7C5C1B000537F6 /* main.m in Sources */,
+				127BD59D1C8805A4006FFD0D /* DrawView.m in Sources */,
 				120D02631C7FEB7E0062204E /* MainViewController.m in Sources */,
 				120045C21C8532A40054372F /* AddressItemView.m in Sources */,
 			);

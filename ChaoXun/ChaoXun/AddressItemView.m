@@ -7,6 +7,7 @@
 //
 
 #import "AddressItemView.h"
+#import "MainViewController.h"
 
 @implementation AddressItemView
 
@@ -22,18 +23,14 @@
     [self addSubview:label];
     
     
-    UIButton *b = [[UIButton alloc] initWithFrame:label.frame];
-    [b addTarget:self action:@selector(chancle) forControlEvents:UIControlEventTouchUpOutside];
-    [b addTarget:self action:@selector(touch) forControlEvents:UIControlEventTouchDown];
- 
-    [self addSubview:b];
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
 
-    [self shakeAnimate];
+    [self shakeAnimate1];
     NSLog(@"开始触摸");
+    [self paly];
 }
 
 -(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
@@ -44,7 +41,6 @@
     for (UIView *view in self.subviews) {
         [view.layer removeAllAnimations];
     }
-    [self stopAnimate];
 
 }
 -(void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
@@ -54,11 +50,11 @@
 }
 
 #pragma mark - 动画
-
--(void)shakeAnimate
+//左右摇晃
+-(void)shakeAnimate1
 {
     //label颤抖  不好停止
-//    UILabel *label = [self viewWithTag:Label_TAG];
+    UILabel *label = [self viewWithTag:Label_TAG];
 //    CGAffineTransform  transformIdentifer =  self.transform;
 //    [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveLinear|UIViewAnimationOptionRepeat animations:^{
 //        CGAffineTransform  rotate = CGAffineTransformRotate(transformIdentifer, M_PI/6);
@@ -85,7 +81,7 @@
     CABasicAnimation *shakAnimate1 = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
     shakAnimate1.autoreverses = YES;
 //    shakAnimate1.repeatDuration = HUGE_VALF;
-    shakAnimate1.duration = 1;
+    shakAnimate1.duration = 0.1;
     shakAnimate1.fromValue = [NSNumber numberWithFloat:-M_PI/6];
     shakAnimate1.toValue=[NSNumber numberWithFloat:M_PI/6];
 //    [self.layer addAnimation:shakAnimate1 forKey:@"appDeleteShakeAnimation"];
@@ -93,7 +89,7 @@
     CABasicAnimation *shakAnimate2 = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
     shakAnimate2.autoreverses = YES;
 //    shakAnimate1.repeatDuration = HUGE_VALF;
-    shakAnimate2.duration = 1;
+    shakAnimate2.duration = 0.1;
     shakAnimate2.fromValue = [NSNumber numberWithFloat:M_PI/6];
     shakAnimate2.toValue=[NSNumber numberWithFloat:-M_PI/6];
 //    [self.layer addAnimation:shakAnimate2 forKey:@"appDeleteShakeAnimation"];
@@ -102,29 +98,19 @@
     shakAnimate.animations = @[shakAnimate1,shakAnimate2];
 //    shakAnimate1.repeatDuration = HUGE_VALF;
     shakAnimate.autoreverses = YES;
-    shakAnimate.repeatCount = 5;
-    shakAnimate.duration = 2;
-    [self.layer addAnimation:shakAnimate forKey:@"appDeleteShakeAnimation"];
+    shakAnimate.repeatCount = 100;
+    shakAnimate.duration = 0.2;
+    [label.layer addAnimation:shakAnimate forKey:@"appDeleteShakeAnimation"];
+    
 }
 
-
--(void)stopAnimate
+-(void)paly
 {
-    UILabel *label = [self viewWithTag:Label_TAG];
-
-    [UIView animateWithDuration:0.1 animations:^{
-        CGAffineTransform  transformIdentifer =  self.transform;
-        CGAffineTransform  rotate = CGAffineTransformRotate(transformIdentifer, 0.1);
-        self.transform = rotate;
-    }];
+    MainViewController *mainVC = (MainViewController *)self.viewController;
+    [mainVC playTestAnimate];
+    
 }
 
--(void)touch
-{
-    [self shakeAnimate];
-}
--(void)chancle
-{
-    [self stopAnimate];
-}
+//
+
 @end
