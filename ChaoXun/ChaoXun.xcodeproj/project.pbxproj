@@ -17,6 +17,8 @@
 		1253261E1C7C5C1B000537F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1253261C1C7C5C1B000537F6 /* LaunchScreen.storyboard */; };
 		127BD59A1C87DC3B006FFD0D /* UIView+DDAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 127BD5991C87DC3B006FFD0D /* UIView+DDAddition.m */; };
 		127BD59D1C8805A4006FFD0D /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 127BD59C1C8805A4006FFD0D /* DrawView.m */; };
+		12B7B8DA1C89278100DBC84E /* StarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B7B8D91C89278100DBC84E /* StarView.m */; };
+		12B7B8DC1C898C5200DBC84E /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12B7B8DB1C898C5200DBC84E /* star@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,9 @@
 		127BD5991C87DC3B006FFD0D /* UIView+DDAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DDAddition.m"; sourceTree = "<group>"; };
 		127BD59B1C8805A4006FFD0D /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
 		127BD59C1C8805A4006FFD0D /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
+		12B7B8D81C89278100DBC84E /* StarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarView.h; sourceTree = "<group>"; };
+		12B7B8D91C89278100DBC84E /* StarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarView.m; sourceTree = "<group>"; };
+		12B7B8DB1C898C5200DBC84E /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +92,9 @@
 				120045C01C8532A40054372F /* AddressItemView.h */,
 				127BD59B1C8805A4006FFD0D /* DrawView.h */,
 				127BD59C1C8805A4006FFD0D /* DrawView.m */,
+				12B7B8D81C89278100DBC84E /* StarView.h */,
+				12B7B8DB1C898C5200DBC84E /* star@2x.png */,
+				12B7B8D91C89278100DBC84E /* StarView.m */,
 				120045C11C8532A40054372F /* AddressItemView.m */,
 				1253261A1C7C5C1B000537F6 /* Assets.xcassets */,
 				1253261C1C7C5C1B000537F6 /* LaunchScreen.storyboard */,
@@ -174,6 +182,7 @@
 			files = (
 				1253261E1C7C5C1B000537F6 /* LaunchScreen.storyboard in Resources */,
 				120D02641C7FEB7E0062204E /* MainViewController.xib in Resources */,
+				12B7B8DC1C898C5200DBC84E /* star@2x.png in Resources */,
 				1253261B1C7C5C1B000537F6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,6 +196,7 @@
 			files = (
 				127BD59A1C87DC3B006FFD0D /* UIView+DDAddition.m in Sources */,
 				125326101C7C5C1B000537F6 /* AppDelegate.m in Sources */,
+				12B7B8DA1C89278100DBC84E /* StarView.m in Sources */,
 				125326191C7C5C1B000537F6 /* ChaoXun.xcdatamodeld in Sources */,
 				1253260D1C7C5C1B000537F6 /* main.m in Sources */,
 				127BD59D1C8805A4006FFD0D /* DrawView.m in Sources */,

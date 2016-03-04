@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "StarView.h"
 
 @interface MainViewController ()
 @property (weak, nonatomic) IBOutlet UIView *bottomBar;
@@ -21,6 +22,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    StarView *star = [[StarView alloc] init];
+    star.radius = 50;
+    star.frame = CGRectMake(20, 20, 100, 100);
+    star.startColor = [UIColor yellowColor];
+    star.backgroundColor = [UIColor clearColor];
+    
+    [self.view addSubview:star];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,11 +58,12 @@
     // 具体的layer
     CALayer *anmiateLayer = [CALayer layer];
 //    anmiateLayer.cornerRadius = 5;
-    anmiateLayer.frame = CGRectMake(-5, 0, 5, 5);
+    anmiateLayer.frame = CGRectMake(0, 0, 10, 10);
     anmiateLayer.backgroundColor = [UIColor whiteColor].CGColor;
     anmiateLayer.shadowColor = [UIColor greenColor].CGColor;
     anmiateLayer.borderWidth = 3;
     anmiateLayer.borderColor = [UIColor whiteColor].CGColor;
+    
     
     //动作效果c
     CAKeyframeAnimation *oneAnimate = [CAKeyframeAnimation animation];
@@ -61,21 +73,30 @@
     oneAnimate.repeatCount = 2;
     oneAnimate.calculationMode = @"cubicPaced";
     
+    //改变大小
+    CABasicAnimation *scaleAnimate = [CABasicAnimation animation];
+    scaleAnimate.keyPath = @"transform.rotation";
+    scaleAnimate.fromValue = @(M_PI);
+    scaleAnimate.toValue = @(0);
+    scaleAnimate.duration = 0.4;
+    scaleAnimate.repeatCount = MAXFLOAT;
+    
+    
     //复制layer
     //生成CAReplicatorLayer
     CAReplicatorLayer *waveLayer = [CAReplicatorLayer layer];
     //复制图层共十个
     waveLayer.instanceCount = 100;
     //每个图层出现间隔时间
-    waveLayer.instanceDelay = 0.01;
+    waveLayer.instanceDelay = 0.12;
     //
     waveLayer.instanceColor = [UIColor whiteColor].CGColor;
     //颜色递减
     waveLayer.instanceGreenOffset = -0.005;
-    waveLayer.instanceBlueOffset = -0.001;
+    waveLayer.instanceBlueOffset = -0.1;
     waveLayer.instanceRedOffset = -0.01;
     
-    waveLayer.affineTransform = CGAffineTransformMakeRotation(0.5);
+//    waveLayer.affineTransform = CGAffineTransformMakeRotation(0.5);
     
     
     [waveLayer addSublayer:anmiateLayer];
@@ -83,10 +104,158 @@
     
     
     
+    [anmiateLayer addAnimation:scaleAnimate forKey:@"scaleAnimate"];
     [anmiateLayer addAnimation:oneAnimate forKey:@"waveAnimate"];
 
 
 
+}
+- (void)starReplicatorLayer_image
+{
+    //路径
+    UIBezierPath *tpath = [UIBezierPath bezierPath];
+    [tpath moveToPoint:CGPointMake(0, 40)];
+    [tpath addLineToPoint:CGPointMake(80, 40)];
+    [tpath addLineToPoint:CGPointMake(80, 20)];
+    [tpath addLineToPoint:CGPointMake(160, 20)];
+    [tpath addLineToPoint:CGPointMake(160, 40)];
+    [tpath addLineToPoint:CGPointMake(240, 40)];
+    [tpath addLineToPoint:CGPointMake(240, 20)];
+    [tpath addLineToPoint:CGPointMake(320, 20)];
+    [tpath closePath];
+    
+    
+    // 具体的layer
+
+    UIImageView *star = [[UIImageView alloc] init];
+    star.frame = CGRectMake(0, 0, 10, 10);
+    star.image = [UIImage imageNamed:@"star"];
+//    star.layer.backgroundColor = [UIColor clearColor].CGColor;
+    
+    //动作效果c
+    CAKeyframeAnimation *oneAnimate = [CAKeyframeAnimation animation];
+    oneAnimate.keyPath = @"position";
+    oneAnimate.path = tpath.CGPath;
+    oneAnimate.duration = 8;
+    oneAnimate.repeatCount = 2;
+    //    oneAnimate.calculationMode = @"cubicPaced";
+    
+    //改变大小
+    CABasicAnimation *scaleAnimate = [CABasicAnimation animation];
+    scaleAnimate.keyPath = @"transform.rotation";
+    scaleAnimate.fromValue = @(M_PI);
+    scaleAnimate.toValue = @(0);
+    scaleAnimate.duration = 0.8;
+    scaleAnimate.repeatCount = MAXFLOAT;
+    
+    
+    //复制layer
+    //生成CAReplicatorLayer
+    CAReplicatorLayer *waveLayer = [CAReplicatorLayer layer];
+    //复制图层共十个
+    waveLayer.instanceCount = 100;
+    //每个图层出现间隔时间
+    waveLayer.instanceDelay = 0.2;
+    //
+    waveLayer.instanceColor = [UIColor yellowColor].CGColor;
+//    //颜色递减
+//    waveLayer.instanceGreenOffset = -0.5;
+//    waveLayer.instanceBlueOffset = -0.1;
+//    waveLayer.instanceRedOffset = -1;
+    
+    //    waveLayer.affineTransform = CGAffineTransformMakeRotation(0.5);
+    
+    [star.layer addAnimation:oneAnimate forKey:@"waveAnimate"];
+    
+    
+    [waveLayer addSublayer:star.layer];
+    [self.bottomBar.layer addSublayer:waveLayer];
+    //    [self.bottomBar addSubview:star];
+    //    [self.bottomBar.layer addSublayer:star.layer];
+    
+        [star.layer addAnimation:scaleAnimate forKey:@"scaleAnimate"];
+    
+    
+    
+}
+- (void)starReplicatorLayer
+{
+    //路径
+    UIBezierPath *tpath = [UIBezierPath bezierPath];
+    [tpath moveToPoint:CGPointMake(0, 40)];
+    [tpath addLineToPoint:CGPointMake(80, 40)];
+    [tpath addLineToPoint:CGPointMake(80, 20)];
+    [tpath addLineToPoint:CGPointMake(160, 20)];
+    [tpath addLineToPoint:CGPointMake(160, 40)];
+    [tpath addLineToPoint:CGPointMake(240, 40)];
+    [tpath addLineToPoint:CGPointMake(240, 20)];
+    [tpath addLineToPoint:CGPointMake(320, 20)];
+    [tpath closePath];
+    
+    
+    // 具体的layer
+//    CALayer *anmiateLayer = [CALayer layer];
+//    //    anmiateLayer.cornerRadius = 5;
+//    anmiateLayer.frame = CGRectMake(0, 0, 10, 10);
+//    anmiateLayer.backgroundColor = [UIColor whiteColor].CGColor;
+//    anmiateLayer.shadowColor = [UIColor greenColor].CGColor;
+//    anmiateLayer.borderWidth = 3;
+//    anmiateLayer.borderColor = [UIColor whiteColor].CGColor;
+//    
+    
+    StarView *star = [[StarView alloc] init];
+    star.radius = 5;
+    star.frame = CGRectMake(0, 0, 10, 10);
+    star.startColor = [UIColor yellowColor];
+    star.layer.backgroundColor = [UIColor clearColor].CGColor;
+//    star.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.5];
+    
+    
+    //动作效果c
+    CAKeyframeAnimation *oneAnimate = [CAKeyframeAnimation animation];
+    oneAnimate.keyPath = @"position";
+    oneAnimate.path = tpath.CGPath;
+    oneAnimate.duration = 8;
+    oneAnimate.repeatCount = 2;
+//    oneAnimate.calculationMode = @"cubicPaced";
+    
+    //改变大小
+    CABasicAnimation *scaleAnimate = [CABasicAnimation animation];
+    scaleAnimate.keyPath = @"transform.rotation";
+    scaleAnimate.fromValue = @(M_PI);
+    scaleAnimate.toValue = @(0);
+    scaleAnimate.duration = 0.8;
+    scaleAnimate.repeatCount = MAXFLOAT;
+    
+    
+    //复制layer
+    //生成CAReplicatorLayer
+    CAReplicatorLayer *waveLayer = [CAReplicatorLayer layer];
+    //复制图层共十个
+    waveLayer.instanceCount = 100;
+    //每个图层出现间隔时间
+    waveLayer.instanceDelay = 0.2;
+    //
+    waveLayer.instanceColor = [UIColor yellowColor].CGColor;
+    //颜色递减
+    waveLayer.instanceGreenOffset = -0.5;
+    waveLayer.instanceBlueOffset = -0.1;
+    waveLayer.instanceRedOffset = -1;
+    
+    //    waveLayer.affineTransform = CGAffineTransformMakeRotation(0.5);
+    
+    [star.layer addAnimation:oneAnimate forKey:@"waveAnimate"];
+
+    
+    [waveLayer addSublayer:star.layer];
+    [self.bottomBar.layer addSublayer:waveLayer];
+//    [self.bottomBar addSubview:star];
+//    [self.bottomBar.layer addSublayer:star.layer];
+    
+//    [star.layer addAnimation:scaleAnimate forKey:@"scaleAnimate"];
+    
+    
+    
 }
 - (void)loveReplicatorLayer
 {
@@ -133,8 +302,9 @@
     
     
 //    [self loveReplicatorLayer];
-    [self waveLineReplicatorLayer];
-    
+//    [self waveLineReplicatorLayer];
+//    [self starReplicatorLayer];
+    [self starReplicatorLayer_image];
 
 }
 
